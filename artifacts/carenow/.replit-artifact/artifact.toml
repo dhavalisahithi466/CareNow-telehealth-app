@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/"
+title = "CareNow"
+description = "A mobile care companion for patients, caregivers, and travelers. It provides fast emergency access, cautious symptom screening, care discovery, consultation entry points, and a private health profile."
+version = "1.0.0"
+id = "artifacts/carenow"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 20268
+
+[services.development]
+run = "pnpm --filter @workspace/carenow run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/carenow", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/carenow", "run", "serve" ]
+
+[services.env]
+PORT = "20268"
+BASE_PATH = "/"

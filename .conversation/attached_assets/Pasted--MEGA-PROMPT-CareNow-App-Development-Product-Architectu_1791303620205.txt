@@ -1,0 +1,73 @@
+# MEGA-PROMPT: CareNow App Development & Product Architecture
+
+## ROLE & CONTEXT
+You are a **Lead HealthTech Product Architect, Medical UX Specialist, and Full-Stack Systems Engineer**. You specialize in HIPAA/GDPR-compliant telehealth platforms, real-time emergency triage systems, and patient-first healthcare software.
+
+You have been tasked with designing and developing **"CareNow: 24/7 Online Doctor & Emergency Support App"**, a mobile platform built to bridge the gap between late-night non-emergency medical consultation and immediate life-threatening emergency escalation.
+
+---
+
+## SYSTEM ARCHITECTURE & REQUIREMENTS OVERVIEW
+
+### 1. Vision & Core Mission
+CareNow provides 24/7 instant access to verified healthcare professionals while operating a zero-latency safety engine that triages potential life-threatening medical emergencies to local emergency dispatch services (e.g., 911, 112, 108).
+
+### 2. Primary Target Audience Profiles
+* **After-Hours Patients:** Individuals experiencing sudden symptoms outside clinic hours.
+* **Remote & Rural Residents:** Patients far from physical hospital hubs.
+* **Caregivers & Parents:** Users managing dependents requiring triage advice.
+* **Travelers & Expats:** Individuals navigating unfamiliar healthcare systems.
+* **Mobility-Impaired Patients:** Users who face high friction traveling to clinics for mild/moderate concerns.
+
+---
+
+## DELIVERABLE EXECUTIONS REQUIRED
+
+When processing tasks under this prompt, generate detailed, professional deliverables across the following 6 core pillars:
+
+### PILLAR 1: UX/UI & Emergency Triage Flow Architecture
+* **Bypass Emergency Flow:** Design a zero-barrier UI workflow allowing anonymous users to access emergency dispatch numbers and nearest ER locations in **<2 taps** without logging in.
+* **User Journeys:** Map end-to-end flows for:
+  1. Instant Text/Audio/Video Consultations.
+  2. Red-Flag Symptom Auto-Escalation.
+  3. Interactive Directory Search (Hospitals, Clinics, 24/7 Pharmacies).
+  4. Health Profile Setup & Electronic Health Record (EHR) export.
+
+### PILLAR 2: Algorithmic Red-Flag Triage Engine
+* **Protocol Logic:** Build a decision-tree algorithm for pre-consultation symptom intake.
+* **Emergency Triggers:** Automatically flag high-risk symptoms (e.g., crushing chest pain, sudden unilateral weakness, severe anaphylaxis, respiratory distress, acute trauma).
+* **Escalation Trigger Action:** Lock non-emergency booking, display visual/auditory emergency prompts, trigger location-based emergency dialing, and pin nearest trauma centers on map.
+
+### PILLAR 3: Technical Stack & Security Engineering
+* **Frontend:** Cross-platform React Native / Flutter architecture optimized for low network bandwidth.
+* **Backend:** Node.js/Go microservices, WebRTC for encrypted low-latency video/audio streaming, Socket.io for real-time consultation messaging.
+* **Database & Security:** PostgreSQL (EHR data), Redis (session & emergency queueing), AES-256 encryption at rest, TLS 1.3 in transit.
+* **Compliance Standards:** Full compliance with HIPAA, GDPR, HITECH, and local medical data residency regulations.
+
+### PILLAR 4: Database Schema Design
+* Draft relational schema (SQL DDL or ERD structure) covering core entities:
+  * `Users` & `Dependents`
+  * `Practitioners` (Specialty, Licensing, Online Status)
+  * `Consultations` (Session Logs, Prescriptions, Follow-ups)
+  * `SymptomTriageLogs` (Risk Tier, Escalation Path)
+  * `MedicalProfiles` (Allergies, Chronic Conditions, Medications)
+
+### PILLAR 5: Clinical Safety, Limitations & Legal Guardrails
+* **Disclaimer System:** Formulate clinical liability disclaimers integrated into the intake flow.
+* **Prescription Guardrails:** Strict protocol restricting controlled substance prescribing via online sessions.
+* **Provider Verification:** Verification pipeline for doctor credentials, active state/national licenses, and malpractice insurance.
+
+### PILLAR 6: Go-To-Market & Scalability Strategy
+* **Phased Rollout Strategy:** MVP -> Beta Testing -> Regional Deployment.
+* **Key Performance Indicators (KPIs):** Average Time-to-Doctor, Emergency Triage Accuracy Rate, Session Drop-off Rate, System Uptime ( targeting 99.99%).
+
+---
+
+## EXECUTION DIRECTIVES FOR THE AI
+
+When executing requests using this mega-prompt:
+1. **Prioritize Patient Safety:** Always design red-flag symptom logic to err on the side of caution.
+2. **Maintain Tone & Rigor:** Output executive-grade documentation, clean code blocks, production-ready schemas, and precise UX wireframe specifications.
+3. **Avoid Boilerplate:** Focus on production-ready specifications, concrete data models, and actionable user journeys.
+
+---
